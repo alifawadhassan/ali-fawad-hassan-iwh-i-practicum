@@ -3,7 +3,12 @@
 This project demonstrates seamless integration with HubSpot's Custom Objects API, designed to manage and interact with custom data entities tailored to specific business needs within the HubSpot ecosystem.
 
 
-**Put your HubSpot developer test account custom objects URL link here:** https://app.hubspot.com/contacts/22802756/objects/2-17722902/views/all/list
+# Loom Video ( For complete functionality explanation )
+https://www.loom.com/share/e1347229f4754023be8e6fa18bb9d3e6?sid=cf97a968-3c5d-4785-9f3c-3e3caa603338
+
+
+**Custom Object List URL:** 
+https://app.hubspot.com/contacts/22802756/objects/2-17722902/views/all/list
 
 
 # Routes and Usage
