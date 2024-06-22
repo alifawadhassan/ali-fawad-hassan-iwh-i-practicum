@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script.
+      $(document).ready(function() {
+        $('.card').click(function() {
+          const objectId = $(this).attr('data-id');
+          window.location.href = `/update-cobj/${objectId}`; // Redirect to update page
+        });
+      });
+  body
+    h1 Custom Objects List
+
+    .button-container
+      a.button(href='/create-cobj') Add Object
+
+    .cards
+      each record in data
+        .card(data-id=record.properties.hs_object_id tabindex="0" role="button" aria-pressed="false")
+          h2.card__name Name: #{record.properties.name}
+          p.card__test <b>Test</b>: #{record.properties.test}
+          p.card__details <b>Details</b>: #{record.properties.details}
+          p.card__amount <b>Amount</b>: #{record.properties.amount}
