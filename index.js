@@ -1,13 +1,14 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
+require("dotenv").config();
 
 app.set("view engine", "pug");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PRIVATE_APP_ACCESS = "";
+const PRIVATE_APP_ACCESS = process.env.HS_TOKEN;
 const CUSTOM_OBJECT_TYPE = "2-17722902"; // Replace with your custom object type ID
 let customObjectsData = []; // To store fetched custom objects data
 
