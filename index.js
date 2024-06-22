@@ -7,7 +7,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PRIVATE_APP_ACCESS = "pat-na1-30c80bf2-e7c2-4804-826d-aac8dd775043";
+const PRIVATE_APP_ACCESS = "";
 const CUSTOM_OBJECT_TYPE = "2-17722902"; // Replace with your custom object type ID
 let customObjectsData = []; // To store fetched custom objects data
 
