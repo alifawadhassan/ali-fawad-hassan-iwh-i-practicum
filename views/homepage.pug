@@ -7,7 +7,7 @@ html
     script(src='https://code.jquery.com/jquery-3.6.0.min.js')
     script.
       $(document).ready(function() {
-        $('.card').click(function() {
+        $('.update-button').click(function() {
           const objectId = $(this).attr('data-id');
           window.location.href = `/update-cobj/${objectId}`; // Redirect to update page
         });
@@ -18,10 +18,21 @@ html
     .button-container
       a.button(href='/create-cobj') Add Object
 
-    .cards
-      each record in data
-        .card(data-id=record.properties.hs_object_id tabindex="0" role="button" aria-pressed="false")
-          h2.card__name Name: #{record.properties.name}
-          p.card__test <b>Test</b>: #{record.properties.test}
-          p.card__details <b>Details</b>: #{record.properties.details}
-          p.card__amount <b>Amount</b>: #{record.properties.amount}
+    .table-container
+      table
+        thead
+          tr
+            th Name
+            th Test
+            th Details
+            th Amount
+            th Actions
+        tbody
+          each record in data
+            tr
+              td #{record.properties.name}
+              td #{record.properties.test}
+              td #{record.properties.details}
+              td #{record.properties.amount}
+              td
+                button.update-button(data-id=record.properties.hs_object_id) Update
